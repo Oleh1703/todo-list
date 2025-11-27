@@ -12,6 +12,7 @@
     - [TodoFilter](#todofilter)
     - [useTodoData](#usetododata)
     - [TodoReducer](#todoreducer)
+  - [Встановлення та запуск](#встановлення-та-запуск)
 
 
 
@@ -56,3 +57,16 @@
 - `changeTitleTask`
 - `setTasks`
 
+##  Встановлення та запуск
+
+1. Клонуйте репозиторій:
+
+git clone https://github.com/Oleh1703/todo-list.git
+
+2. Встановіть залежності:
+
+npm install
+
+3. Запустіть застосунок:
+
+npm start
