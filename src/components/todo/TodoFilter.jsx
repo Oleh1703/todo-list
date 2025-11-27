@@ -1,12 +1,19 @@
 import React from 'react';
 
-const TodoFilter = ({ filter, setFilter, filtersObject }) => {
+const TodoFilter = ({ filter, setFilter, filtersObject }) => { 
+    /*
+    filter -> стан поточного фільтра
+    setFilter -> функція для зміни фільтра
+    filtersObject -> обєкт із фільтрами
+    */
     console.log("Todo Filter Rendered!");
 
-    const switcher = Object.keys(filtersObject); //return ['All', 'Todo', 'Done']
+    //return ['All', 'Todo', 'Done']
+    const switcher = Object.keys(filtersObject); 
 
     return (
         <div>
+            {/* Рендеримо кнопку для кожного фільтра */}
             {switcher.map((swt) =>
                 <button key={swt}
                     onClick={() => setFilter(swt)}

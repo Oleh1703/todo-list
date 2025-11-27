@@ -1,13 +1,19 @@
 import React, {useState} from 'react';
 
 const TodoForm = ({ handleAddTask }) => {
+    //handleAddTask -> ф-ція з батьківськог окомпонента для дод.Завдань
 
     console.log("Todo Form rendered!");
     
-
+    /* 
+    title -> стан для заголовку ('' - початкове значеня) 
+    error- стан для помилок (false - помилки немає)
+    */
     const [title, setTitle] = useState('');
     const [error, setError] = useState(false);
 
+
+    //Сторення нової задані з використанням (handleAddTast)
     const clickHandler = () => {
         if(title.length === 0){
             setError("Title cannot be empty");
@@ -30,7 +36,9 @@ const TodoForm = ({ handleAddTask }) => {
             value={title} 
             onChange={(e) => setTitle(e.target.value)} 
             onKeyDown={(e)=> e.key === "Enter" && clickHandler() } />
+            {/* Add Task */}
             <button onClick={clickHandler} >Add Task</button>
+            {/* View error if he != false  */}
             {error && <div className='error'>{error}</div>}
         </div>
     );
